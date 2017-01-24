@@ -1,0 +1,329 @@
+/*
+INFO/CS 1300
+Fall 2016
+Yanying (Mary) Ji
+CSS for assignment05 index.html
+*/
+
+/*
+Code formatting:
+- general to specific, then by rough order of appearance
+- alphabetical order or functional grouping
+- section labels in comments
+- white space
+- start at top, move clockwise for margins, etc.
+*/
+
+/* colors from https://coolors.co/
+all the colors involved on this page are from this website.
+*/
+
+/****************************/
+/*resets and global styling */
+/****************************/
+/* reset info at http://cssreset.com/scripts/eric-meyer-reset-css/ */
+html, body, .row{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+img {
+    width:100%;
+    height:auto;
+}
+
+iframe {
+    border: 1px solid rgba(187,187,187,0.3);
+}
+
+a {
+    text-decoration: none;
+}
+
+footer {
+    text-align: center;
+    background-color: #000000;
+    padding: 12em 0 3em 0;
+}
+
+.content {
+    font-family:'Open Sans', sans-serif;
+}
+
+.title {
+    font-family:'Quantico',sans-serif;
+    letter-spacing:0.2em;
+    font-size:1.3em;
+    text-align: center;
+}
+
+.quote, .sig {
+    font-family:'Lato', sans-serif;
+    font-size:3em;
+    letter-spacing:1px;
+    color:#ffffff;
+    padding:1.5em;
+}
+
+/**********************/
+/* styling by section */
+/**********************/
+
+.header {
+    /* media source URL: https://www.facebook.com/bangtan.official/ */
+    background-image: url(../images/maxresdefault.jpg);
+    background-position:center;
+    background-size:contain;
+    background-repeat:no-repeat;
+    width:100%;
+    height:375px;
+    text-align:center;
+    position:relative;
+}
+
+.header .container {
+    width:100%;
+    left:0px;
+    top:0px;
+}
+
+.header .col-3 {    
+    display:inline-block;
+    width:24%;
+    margin-top:0.7em;
+}
+
+.header .col-3 .content a {
+    color:#000000;
+    font-family:'Quantico', sans-serif;
+    font-size:1.1em;
+    letter-spacing:.1em;
+}
+
+.header .col-3 .content a:hover {
+    color:rgb(170,170,170);
+}
+
+.sub-title {
+    font-family:'Open Sans',sans-serif;
+    font-size:1.2em;
+    letter-spacing:0.1em;
+    margin:0 auto;
+    width:100%;
+    bottom:10%;
+    position:absolute;
+}
+
+.WINGS {
+    background-color:#000000;
+    padding-bottom:0.5em;
+}
+
+.WINGS .container .row {
+    margin-top:2em;
+    margin-bottom:3em;
+}
+
+.WINGS .row .cell{
+    width:100%;
+    text-align: center;
+}
+
+.WINGS .title {
+    width:100%;
+    color:#ffffff;
+    padding-top:1.5em;
+}
+
+.WINGS .container .row-mobile{
+    display:none;
+}
+
+.WINGS .container .row-mobile .title {
+    font-family: 'Lato', sans-serif;
+    font-size:1.5em;
+}
+
+.WINGS .row .cell .col-4 img {
+    display:block;
+    max-height:235px;
+    max-width:235px;
+    min-width:235px;
+}
+.WINGS .row .cell .col-4 {
+    display:inline-block;
+    max-width: 33%;
+    margin-right:0.5em;
+    vertical-align: middle;
+}
+
+.WINGS .row .cell .col-8 {
+    display:inline-block;
+    width:67%;
+    vertical-align: middle;
+}
+
+.WINGS .row .cell .col-8 .content {
+    color:#ffffff;
+    font-size:0.99em;
+    line-height:1.8em;
+    padding:0.5em;
+    padding-bottom:3em;
+}
+
+.WINGS .col-8 .p1 {
+    text-align: left;
+}
+
+.WINGS .col-8 .p2 {
+    text-align: right;
+}
+
+.WINGS .col-8 .p2 span {
+    font-style: italic;
+}
+
+.short-films {
+    padding-top:2em;
+}
+
+.short-films .title {
+    margin-bottom:1em;
+}
+
+.short-films .row .cell {
+    text-align: center;
+}
+
+.short-films .row .cell .col-9 {
+    display:inline-block;
+    width: 74%;
+    height: 0;
+    vertical-align: middle;
+    padding-bottom: 41.7%;
+    position: relative;
+}
+
+.short-films iframe {
+    /* media source URL: https://www.facebook.com/bangtan.official/ */
+    background-image:url(../images/14448277_1301717886519016_704207317503049728_n.jpg);
+    background-position:center;
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-color:#000000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.short-films .row .cell .col-3 {
+    display:inline-block;
+    max-width: 20%;
+    margin-left:1em;
+    vertical-align: middle;
+}
+
+.short-films .row .cell .col-3 span {
+    display:inline-block;
+    font-size:0.9em;
+    text-align:left;
+    margin:0.9em 0 0.9em 0;
+    width:81%;
+}
+
+.short-films a {
+    display:inline-block;
+    font-family:'Quantico', sans-serif;
+    color:#000000;
+    border-bottom:0.1em solid #000000;
+    border-left:0.1em solid #000000;
+    padding-left:1.5em;
+    padding:0.6em;
+    width:89%;
+}
+
+.short-films a:hover {
+    color:rgb(170,170,170);
+    border:none;
+    border-top:0.1em solid #bbbbbb;
+    border-right:0.1em solid #bbbbbb;
+}
+
+.trailer {
+    background-color:#000000;
+}
+
+.trailer .col-12 {
+    text-align: center;
+    margin:auto 0;
+}
+
+.trailer .row:first-child {
+    margin-top:5em;
+}
+
+.trailer .title {
+    color:#ffffff;
+    padding-top:2em;
+    padding-bottom:4em;
+}
+
+.trailer .row:nth-child(3) .col-12 {
+    display:block;
+    height: 0;
+    padding-bottom: 56.25%;
+    position:relative;
+}
+
+.trailer .sig {
+    padding-top:0.5em;
+}
+
+.trailer .row:nth-child(3) .col-12 iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border:none;
+}
+
+.concept-photo .title {
+    padding-top:1.5em;
+    padding-bottom:1em;
+    margin-top:2em;
+}
+
+.concept-photo img {
+    max-width:100%;
+    max-height:100%;
+    margin:-0.1em;
+}
+
+.concept-photo .col-12 {
+    background-color:#000000;
+    text-align: center;
+}
+
+footer > p {
+    color: #ffffff;
+    font-family:'Lato', sans-serif;
+    font-size: 0.9em;
+    font-weight:800;
+    letter-spacing: 0.1em;
+}
+
+footer a {
+    text-decoration: none;
+    color:#ffffff;
+}
+
+footer a:hover {
+    color: #bbbbbb; 
+}

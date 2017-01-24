@@ -1,0 +1,174 @@
+/*
+INFO/CS 1300
+Fall 2016
+Yanying (Mary) Ji
+CSS for assignment03 index.html
+*/
+
+/*
+Code formatting:
+- general to specific, then by rough order of appearance
+- alphabetical order or functional grouping
+- section labels in comments
+- white space
+- start at top, move clockwise for margins, etc.
+*/
+
+/* colors from colorbrewer2.org
+all the colors involved on this page are from this website.
+*/
+
+/* extra styling learned from http://www.w3schools.com, including 
+- rgba()
+- line-height
+- letter-spacing
+- font-style
+- background-image
+- background-position
+*/
+
+/****************************/
+/*resets and global styling */
+/****************************/
+/* reset info at http://cssreset.com/scripts/eric-meyer-reset-css/ */
+html, body {
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+body {
+    background-color: #f7f7f7;
+    font-family: 'Abel', sans-serif;
+    font-size: 0.9em;
+}
+
+h2 {
+    font-family: 'Alegreya Sans SC', sans-serif;
+    background-color: rgba(254,224,182,0.3);
+    padding: 0.5em;
+    color: #b35806;
+    letter-spacing: 0.05em;
+}
+
+p {
+    font-size: 125%;
+    color: #2d004b;
+    text-indent: 0.5em;
+    line-height: 1.4em;
+    margin: 0.5em;
+}
+
+footer {
+    background-color: #b2abd2;
+    text-align: center;
+    padding: 1em 0 8em 0;
+}
+
+/**********************/
+/* styling by section */
+/**********************/
+
+#banner {
+    background-color: #b2abd2;
+    /* media source URL:http://voda.donga.com */
+    background-image: url('../images/57c5755404900.jpg'); 
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    width: inherit;
+    margin: inherit;
+    padding: inherit;
+}
+
+#banner > h1 {
+    background: #5e3c99; /* back-up for browser that does not take rgba */
+    background: rgba(94,60,153,0.4);
+    width: 100%;
+    margin: 0 0 auto 0;
+    padding: 0.5em 0 0.5em 0;
+    font-family: 'Alegreya Sans SC',sans-serif;
+    font-weight: 100;
+    letter-spacing: 0.1em; 
+    color: #f7f7f7;
+    float: left;
+    text-align: center;
+}
+
+#nav_bar {
+    border-top: solid 0.8em #f7f7f7;
+    background-color: #b2abd2;
+    margin: 0 auto 1em auto;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+    font-family: Abel, sans-serif;
+    text-align: center;
+}
+
+#nav_bar ul{
+    list-style-type: none;
+}
+
+#nav_bar li{
+    display: inline;
+    margin-right: 1.75em;
+    font-size: 1.25em;
+}
+
+#nav_bar a {
+    text-decoration: none;
+    color: #5e3c99;
+}
+
+#nav_bar a:hover {
+    color: #f7f7f7;
+}
+
+#content_container {
+    margin: auto;
+    max-width: 960px;
+}
+
+#content_container img {
+    width: 100%;
+    height: auto;
+    padding-top: 0.75em;
+}
+
+.section {
+    margin:5em 0 5em 0;
+}
+
+.caption{
+    margin-top: 0.5em;
+    text-align:center;
+    color: #666A86;  
+    font-style:italic;
+}
+
+.superscript a{
+    text-decoration: none;
+    color: #2d004b;
+}
+
+.superscript a:hover {
+    color: #666A86;
+}
+footer > p {
+    font-family: 'Abel', sans-serif;
+    font-size:0.8em;
+    color: #f7f7f7;
+    letter-spacing:0.1em;    
+}
+
+footer a {
+    text-decoration: none;
+    color:#f7f7f7;
+}
+
+footer a:hover {
+    color: #666A86; 
+}

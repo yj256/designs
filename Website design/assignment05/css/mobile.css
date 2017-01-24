@@ -1,0 +1,230 @@
+/* http://stackoverflow.com/questions/19592968/bootstrap-3-breakpoints-and-media-queries */
+
+/* if less than 480px */ 
+@media (max-width: 480px) {
+    .quote, .sig {
+        font-size:2em;
+    }
+    
+    .header {
+        background-image: none;
+        height:250px;
+        position: relative;
+    }
+    
+    .sub-title {
+        display:none;
+    }
+    
+    .header .row .cell{
+        width:100%;
+        height:100%;
+        /* original source URL: https://www.facebook.com/bangtan.official/ */
+        /* modified by : Yanying Ji */
+        background-image:url(../images/maxresdefault.png);
+        background-size:cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index:0;
+        position: absolute;
+    }
+    
+    .header .row .cell .col-3 {
+        display:block;
+        width:100%;
+        height:25%;
+        margin:0;
+        background: 
+            -webkit-linear-gradient(rgba(255,255,255,0.3),rgba(187,187,187,0.1));
+        background:
+            -o-linear-gradient(rgba(255,255,255,0.3),rgba(187,187,187,0.1));
+        background:
+            -moz-linear-gradient(rgba(255,255,255,0.3),rgba(187,187,187,0.1));
+        background:
+            linear-gradient(rgba(255,255,255,0.3),rgba(187,187,187,0.1));
+    }
+    
+    /* code adapated from: http://stackoverflow.com/questions/24975164/how-do-i-center-an-anchor-element-both-vertically-and-horizontally-in-a-floating */
+    .header .col-3 .content{
+        display:table;
+        height:100%;
+        width:100%;
+    }
+    
+    .header .col-3 .content a {
+        display: table-cell;
+        font-size:2em;
+        text-align: center;
+        vertical-align: middle;
+    }
+    
+    .header .col-3 .content a:hover {
+        color:#ffffff;
+        background-color:#000000;
+        border:none;
+        z-index:-1;
+    }
+    
+    .WINGS .container .row-mobile {
+        display:inline;
+    }
+    
+    .WINGS .row .cell .col-4 img {
+        display:none;
+    }
+
+    .WINGS .col-8 .content{
+        text-align: center;
+    }
+  
+    .short-films .row .cell .col-9{
+        width:100%;
+        padding-bottom:56.25%;
+    }
+    
+    .short-films .row .cell .col-3 {
+        max-width:100%;
+        padding:0;
+        margin:0;
+        vertical-align: middle;
+    }
+    
+    .short-films .row .cell .col-3 span {
+        font-size:1.2em;
+        text-align:center;
+        width:100%;
+        margin:0;
+    }
+    
+    .short-films .row .cell .col-3 span a {
+        border-left:none;
+    }
+    
+    .short-films .row .cell .col-3 span a:hover {
+        color:rgb(160,160,160);
+        background: -webkit-linear-gradient(rgba(255,255,255,0.3),rgba(187,187,187,0.1));
+        background: -o-linear-gradient(rgba(255,255,255,0.3),rgba(187,187,187,0.1));
+        background: -moz-linear-gradient(rgba(255,255,255,0.3),rgba(187,187,187,0.1));
+        background: linear-gradient(rgba(255,255,255,0.3),rgba(187,187,187,0.1));
+        border:none;
+        border-bottom:1px solid rgba(187,187,187,0.1);
+    }
+    
+    .concept-photo img {
+        margin:-2px;
+    }
+    
+    footer {
+        padding: 8em 0 2em 0;
+    }
+    
+    footer > p {
+        font-size:0.7em;
+    }
+}
+
+/* between 481 and 768 */ 
+@media (min-width: 481px) and (max-width: 768px) { 
+    .quote, .sig {
+        font-size:2.5em;
+    }
+    
+    .header .col-3 {
+        background:rgba(180,180,180,0.05);
+        font-size:0.75em;
+        padding-top:0.2em;
+        padding-bottom:0.2em;
+        margin-top:1em;
+    }
+    
+    .WINGS {
+        background-color:rgba(0,0,0,0.95);
+    }
+    
+    .WINGS .container {
+        /* original media source URL: https://www.facebook.com/bangtan.official/ */
+        /* modified by : Yanying Ji */
+        background-image:url(../images/Invert.png);
+        background-position:center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .WINGS .container .row-mobile {
+        display:inline;
+    }
+    
+    .WINGS .row .cell .col-4 img {
+        display:none;
+    }
+
+    .WINGS .col-8 .content{
+        text-align: center;
+    }
+
+    .short-films .row .cell .col-9{
+        width:100%;
+        padding-bottom:56.25%;
+    }
+    
+    .short-films .row .cell .col-3 {
+        max-width:100%;
+        padding:0;
+        margin:0;
+        vertical-align: middle;
+    }
+    
+    .short-films .row .cell .col-3 span {
+        font-size:1.2em;
+        width:100%;
+        margin:0.3em 0 0.3em 0;
+        text-align:center;
+    }
+    
+    .short-films .row .cell .col-3 span a {
+        border-left:none;
+    }
+    
+    .short-films .row .cell .col-3 span a:hover {
+        color:rgb(160,160,160);
+        background: -webkit-linear-gradient(rgba(255,255,255,0.3),rgba(187,187,187,0.1));
+        background: -o-linear-gradient(rgba(255,255,255,0.3),rgba(187,187,187,0.1));
+        background: -moz-linear-gradient(rgba(255,255,255,0.3),rgba(187,187,187,0.1));
+        background: linear-gradient(rgba(255,255,255,0.3),rgba(187,187,187,0.1));
+        border:none;
+        border-bottom:1px solid rgba(187,187,187,0.1);
+    }
+    
+    footer {
+        padding:10em 0 3em 0;
+    }
+    
+    footer > p {
+        font-size:0.8em;
+    }
+}
+
+/* between 769 and 992 */ 
+@media (min-width: 769px) and (max-width: 992px) {
+    .short-films .row .cell .col-3 span{
+        margin:0.6em 0 0.6em 0;
+    }
+}
+
+/* between 993 and 1200 */ 
+@media (min-width: 993px) and (max-width: 1200px) {
+    .title {
+        font-size:1.5em;
+    }
+}
+
+/* greater than 1201 */ 
+@media (min-width: 1201px) {
+    .header .col-3 {
+        margin-top:0.8em;
+    }
+    
+    .header .col-3 .content a{
+        font-size:1.3em;
+    }
+}

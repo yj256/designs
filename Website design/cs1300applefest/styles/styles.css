@@ -1,0 +1,451 @@
+/* Learned flex from url:https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+
+
+/* Page Style */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    color: #8F8F8F;
+    background: white;
+    font-family: "Roboto", serif;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    border: 0;
+    margin: 0;
+    padding: 0;   
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #eaeaea;
+}
+
+h1 {
+    margin: 0;
+    font-size: 30px;
+    line-height: 1.8;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+}
+
+p {
+    margin-bottom: 20px;
+    font-size: 17px;
+    line-height: 2;
+}
+
+table, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    display: inline-block;
+}
+
+iframe {
+    width: 600px;
+    height: 450px;
+    border: 0;
+}
+
+.content {
+    padding: 1em 2%;
+}
+
+.row {
+    width: 100%;
+    max-width: 940px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(57,62,65,0.6);
+    text-align: center;
+    overflow-y: scroll;
+    padding-top: 10%;
+}
+
+.lightbox p {
+    text-align: right;
+    color: #FFFFFF;
+    margin-right: 20px;
+    font-size: 12px;
+}
+
+.lightbox img {
+    box-shadow: 0 0 25px rgba(0,0,0,0.8);
+    -webkit-box-shadow: 0 0 25px rgba(0,0,0,0.8);
+    -moz-box-shadow: 0 0 25px rgba(0,0,0,0.8);
+    max-width: 85%;
+    max-height: 85%;
+    margin-bottom: 5%;
+    border-radius:0.1em;
+}
+
+/* Navigation */
+.main_h {
+    position: fixed;
+    max-height: 70px;
+    z-index: 999;
+    width: 100%;
+    padding-top: 7px;
+    background: none;
+    overflow: hidden;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    opacity: 0;
+    top: -100px;
+    padding-bottom: 6px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.open-nav {
+    max-height: 400px;
+}
+
+.open-nav .mobile-toggle {
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+}
+
+.sticky {
+    background-color: rgba(162, 225, 239, 0.93);
+    opacity: 1;
+    top: 0px;
+    border-bottom: 1px solid rgba(143,143,143,0.3);
+}
+
+.logo {
+    float: left;
+    display: block;
+    height: 52px;
+    margin-left: 1em;
+}
+
+nav {
+    float: right;
+    width: 80%;
+}
+
+nav ul {
+    list-style: none;
+    overflow: hidden;
+    text-align: right;
+    margin-right: 2em;
+}
+
+ul li {
+    display: inline-block;
+    margin-left: 1.5em;
+    line-height: 1.5;
+}
+
+li a {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+}
+
+.mobile-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 20px;
+    position: absolute;
+    padding-top: 15px;
+    right: 22px;
+    top: 0;
+    width: 30px;
+    -webkit-transition: all 200ms ease-in;
+    -moz-transition: all 200ms ease-in;
+    transition: all 200ms ease-in;
+}
+
+.mobile-toggle span {
+    width: 30px;
+    height: 4px;
+    margin-bottom: 6px;
+    border-radius: 1000px;
+    background: #FFFFFF;
+    display: block;
+}
+
+.hero {
+    position: relative;
+    background: #fff url(../images/hero.jpg) no-repeat center center fixed; /* This image was taken by Ksenia Verdiyan '14. url:https://www.facebook.com/Cornell/photos/a.10153606471935132.1073741866.8570160131/10153606472420132/?type=3&theater */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+    min-height: 200px;
+    letter-spacing: 2px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    bottom: 25px;
+}
+
+.top_nav nav {
+    width: 100%;
+    font-size: 90%;
+    margin-top: 2%;
+}
+
+.top_nav ul {
+    margin-right: 5%;
+}
+
+.top_nav li {
+    margin-left: 1.5em;
+}
+
+.top_nav a {
+    color: #393E41;
+    letter-spacing: 1px;
+    opacity: 0.6;
+}
+
+.top_nav ul li a span {
+    background-color: rgba(57,62,65,0.3);
+    padding: 1.25em;
+}
+
+.top_nav a:hover {
+    opacity: 0.9;
+}
+
+.banner {
+    background-color: rgba(201,98,90,0.8);
+    font-family: 'Roboto',sans-serif;
+    font-weight: 700;
+    color: rgba(255,255,255,0.9);
+    text-shadow: 1px 1px rgba(0,0,0,0.2);
+}
+
+.banner p {
+    padding: 1em;
+    line-height: 125%;
+    margin-left: 20%;
+    margin-right: 20%;
+    letter-spacing: 0;
+    font-size: 95%;
+    margin-bottom: 0;
+}
+
+.sec01 {
+    min-height: 500px;
+    text-align: center;
+    vertical-align: middle;
+    padding-bottom: 2em;
+}
+
+.sec01 .box {
+    background-color: rgba(234,234,234,0.7);
+    width: 350px;
+    height: 458px;
+    display: inline-table;
+    border-radius: 15px;
+    padding: 0 0.9em 0 0.9em;
+    font-size: 1.2em;
+    word-wrap: break-word;
+    line-height: 150%;
+    overflow: hidden;
+    opacity: 0.8;
+    margin-top: 1em;
+}
+
+.box:hover {
+    opacity: 1;
+}
+
+.sec01 .item1 img {
+    width: 120%;
+    margin-left: -20px;
+    margin-right: -20px;
+    display: block;
+    position: relative;
+    opacity: 0.9;
+}
+
+.sec01 .item1 img:hover {
+    opacity: 1;
+}
+
+.sec01 .item1 span {
+    font-weight: 700;
+    text-align: center;
+}
+
+.sec02 {
+    background-color: #C9625A;
+    color: #fff;
+    padding-bottom: 1.5em;
+}
+
+.flex-container {
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: stretch;
+    overflow-y: hidden;
+}
+
+.sec02 img, .sec03 img{
+    width: 30%;
+    height: 30%;
+    margin: 10px;
+    flex-grow: 1;
+    opacity: 0.4;
+    border-radius: 15px;
+}
+
+.sec02 img:hover, .sec03 img:hover {
+    opacity: 1;
+    border-radius: 2px;
+}
+
+.sec03 {
+    background-color: #393E41;
+    color: #fff;
+    padding-bottom: 1.5em;
+}
+
+.sec04 {
+    background-color: #F2B759;
+    color: #fff;
+    padding-bottom: 2em;
+}
+
+.sec04 .tables {
+    display: inline-flex;
+    width: 100%;
+}
+
+.sec04 table {
+    width: 45%;
+    margin-left: 2%;
+    margin-right: 2%;
+    display: table;
+    text-align: center;
+    font-family: "Roboto",sans-serif;
+}
+
+.sec04 td,.sec04 th {
+    width: 50%;
+    border-bottom: 1px solid #FFFFFF;
+    font-weight: 300;
+}
+
+.sec04 td:hover,.sec04 th:hover {
+    background: #FFFFFF;
+    color: #F2B759;
+}
+
+.sec04 th {
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.sec04 td {
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.sec04 table tr:nth-child(1) th {
+    width: 100%;
+    font-size: 130%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.sec04 table tr:nth-child(1) th:hover {
+    background: none;
+    color: #FFFFFF;
+}
+
+.sec04 table tr:nth-child(2) th, .sec04 table:nth-child(1) tr:nth-child(13) th,
+.sec04 table:nth-child(2) tr:nth-child(5) th,.sec04 table:nth-child(2) tr:nth-child(10) th{
+    width: 100%;
+    font-size: 110%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    color: #F2B759;
+    background: #EFEFEF;
+}
+
+.sec05 {
+    text-align: center;
+    padding-bottom: 2em;
+}
+
+.sec05 .content .maps .row {
+    border-top: 5px solid #8f8f8f;
+    border-bottom: 5px solid #8f8f8f;
+    min-height: 500px;
+    text-align: center;
+}
+
+.sec05 .maps {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+.sec05 img {
+    width: 100%;
+    border: 1px solid #8f8f8f;
+    border-radius: 1%;
+}
+
+.sec05 iframe {
+    width: 100%;
+    border-radius: 1%;
+    margin-right: 2%;
+    margin-left: 3%;
+}
+
+.sec05 img {
+    margin-top: 2%;
+}
+
+.sec05 .maps iframe, .sec05 p {
+    width: 46%;
+    float: left;
+    margin-top: 2%;
+}
+
+.sec05 p {
+    text-align: left;
+    margin-right: 3%;
+}

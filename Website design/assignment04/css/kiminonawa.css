@@ -1,0 +1,428 @@
+/*
+INFO/CS 1300
+Fall 2016
+Yanying (Mary) Ji
+CSS for assignment04 index.html scenes.html
+*/
+
+/*
+Code formatting:
+- general to specific, then by rough order of appearance
+- alphabetical order or functional grouping
+- section labels in comments
+- white space
+- start at top, move clockwise for margins, etc.
+*/
+
+/* colors from https://coolors.co/
+all the colors involved on this page are from this website.
+*/
+
+/* extra styling learned from http://www.w3schools.com, including 
+- iframe
+- first-of-type
+*/
+
+/****************************/
+/*resets and global styling */
+/****************************/
+/* reset info at http://cssreset.com/scripts/eric-meyer-reset-css/ */
+html, body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+h1, h2 {
+    font-family: 'Cinzel', serif;
+    color: #2D3047;
+}
+
+h3, h4 {
+    font-family: 'Exo 2', sans-serif;
+    letter-spacing: 0.05em;
+    margin: inherit;
+}
+
+h4 {
+    font-weight: 200;
+}
+
+p {
+    font-family: 'Palanquin', sans-serif;
+    color: #2D3047;
+}
+
+/* code adapted from http://stackoverflow.com/questions/10732690/offsetting-an-html-anchor-to-adjust-for-fixed-header */
+.anchor {
+    display: block;
+    position: relative;
+    top: -7em;
+    visibility: hidden;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+table tr th:first-child {
+    width: 10%;
+    text-align: center;
+}
+
+table tr th:nth-child(even) {
+    width: 40%;
+}
+
+table tr th:nth-child(3) {
+    text-align: center;
+}
+
+tr:not(:first-child):hover {
+    background-color: #FCFAF9;
+}
+
+th, td {
+    padding: 0.4em;
+    border-bottom: 0.1em solid #48E5C2;
+}
+
+th {
+    font-family: 'Exo 2', sans-serif;
+    letter-spacing: 0.1em;
+    font-weight: 900;
+    font-size: 95%;
+    text-align: left;
+}
+
+th:hover {
+    color: #48E5C2;
+}
+
+td {
+    font-family: 'Palanquin', sans-serif;
+    color: #2D3047;
+}
+
+caption {
+    caption-side: bottom;
+    color: #48E5C2;
+    font-family: 'Palanquin', sans-serif;
+    font-size: 80%;
+    letter-spacing: 0.2em;
+    margin-top: 0.5em;
+}
+
+.caption {
+    color: rgba(45,48,71,0.6);
+    font-family: 'Palanquin', sans-serif;
+    font-size: 80%;
+    letter-spacing: 0.2em;
+    background-color: rgba(45,48,71,0.2);
+    padding: 0.3em;
+    margin-bottom: 4em;
+    margin-top: 0.3em;
+}
+
+footer {
+    text-align: center;
+    background-color: rgba(45,48,71,0.9);
+    padding: 1em 0 8em 0;
+    margin-top: 5em;
+}
+
+/**********************/
+/* styling by section */
+/**********************/
+/* code adapted from https://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php */
+.videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    display:block;
+}
+
+.videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.container_header {
+    background-color: #ffffff;
+    /* source URL: http://flying-postman.com/nagoya/movies/3012.html */
+    background-image: url(../images/4977e8a7fc73e529fafbed64fe317a15.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 850px;
+}
+
+.top {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+}
+
+.banner {
+    margin: inherit;
+    padding: inherit;
+}
+
+.banner > a {
+    text-decoration: none;
+}
+
+.banner > a > h1 {
+    color: #f7f7f7;
+    letter-spacing: 0.1em; 
+    font-weight: 200;
+    text-align: left;
+    background: #2d3047; /* back-up for browser that does not take rgba */
+    background: rgba(45,48,71,0.7);
+    width: 100%;
+    padding: 0.2em 0 0.2em 1em;
+    margin: 0;
+    float: left;
+}
+
+#banner_scene {
+    background-size: contain;
+    height: 300px;
+}
+
+#banner_scene > a > h1 {
+    font-size: 1em;
+}
+
+.global_nav {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 0.81em;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    text-align: center;
+    border-bottom: solid 0.3em rgba(72,229,194,0.6);
+    background-color: rgba(247,247,247,0.9);
+    padding: 0.5em 0 0.5em 0;
+    margin: 4.3em auto;
+}
+
+#home, #scenes {
+    color:#44CCB7;
+}
+
+.nav_span {
+    margin: 2.5em;
+}
+
+.nav_span a {
+    text-decoration: none;
+    color: rgba(45,48,71,0.7);
+}
+
+.nav_span a:hover {
+    color: #2D3047;
+}
+
+.container {
+    width: 100%;
+}
+
+.content {
+    max-width: 960px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.col-left {
+    font-family: 'Cinzel',sans-serif;
+    margin-left:0.8em;
+    width: 19%;
+    float: left;
+}
+
+/* code adapted from lynda.com */
+.col-left a > span {
+    display: block;
+    border-bottom: 0.1em solid #48E5C2;
+    padding: 0.5em;
+    padding-bottom: 0;
+    margin-top: 1.1em;
+    margin-right: 1em;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+.col-left a span:hover {
+    color: #FCFCFC;
+    text-align: center;
+    background-color: rgba(72,229,194,0.7);
+    border-bottom: none;
+    padding: 0.8em 1.2em 0.8em 1.2em;
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.col-left a {
+    text-decoration: none;
+    color: rgba(45,48,71,0.8);
+}
+
+#pg2_l {
+    width: 14%;
+}
+
+.col-right {
+    display: inline-block;
+    padding: 0 1em 0 1em;
+    width: 76%;
+}
+
+.col-right h2 {
+    font-weight: 400;
+}
+
+.col-right-tit {
+    margin-top:2em;
+}
+
+.staff_tit {
+    color:rgba(45,48,71,0.8);
+    margin-bottom: -0.5em;
+}
+
+#pg2_r{
+    width: 81%;
+}
+
+#pg2_r h2 {
+    color: #f7f7f7;
+    background-color: #2D3047;
+    padding: 1.3em;
+    margin: auto;
+    margin-bottom: 0.5em;
+}
+
+.frame {
+    /* original img URL: http://imgur.com/gallery/oeGnh */
+    /* edited version by Yanying Ji */
+    background-image: url(../images/5eDEiYi.jpg);
+    background-size: cover;
+    background-position: center;
+    border: 0.2em solid #FCFAF9;
+    margin-bottom: 0.5em;
+    width: 100%;
+    height: 411px;
+}
+
+.span_row {
+    text-align: center;
+    background-color: rgba(132,177,214,0.85);
+    border-radius: 0.1em;
+    padding: 0.5em;
+    margin-left: 0.3em;
+}
+
+.ani_vid a {
+    text-decoration: none;
+    color: #FCFAF9;
+    font-family: 'Palanquin', sans-serif;
+    font-weight: 200;
+    letter-spacing: 0.2em;
+    margin-right: 0.8em;
+}
+
+.ani_vid > a {
+    padding-right: 0.4em;
+    padding-left: 0.4em;
+}
+
+/* code adapted from: 
+http://stackoverflow.com/questions/4411306/css3-transition-of-background-color 
+http://www.w3schools.com/cssref/css3_pr_outline-offset.asp */
+.ani_vid a:hover {
+    background-color: rgba(96,161,214,0.5);
+    outline: 0.2em solid rgba(96,161,214,0.1);
+    outline-offset:-0.2em;
+    padding: 0.5em 0.4em 0.5em 0.4em;
+    -webkit-transition: background-color 200ms linear;
+    -moz-transition: background-color 200ms linear;
+    -o-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
+    transition: background-color 200ms linear;
+}
+
+.update_sec {
+    padding-left: 0.3em;
+}
+
+.update_sec:hover {
+    background-color: rgba(132,177,214,0.1);
+}
+
+.date {
+    color: rgba(45,48,71,0.7);
+    border-bottom: 0.1em solid #5098D3;
+    border-bottom-style: dashed;
+    padding-bottom: 0.3em;
+    margin-top: 2.5em;
+}
+
+#fst_date {
+    margin-top:0;
+}
+
+.updates {
+    color: rgba(96,161,214,0.9);
+    padding-top: 0.7em;
+    margin-bottom: 1em;
+}
+
+.update_sec p {
+    padding-bottom:0.7em;
+}
+
+.staff_tit {
+    color: #292D44;
+}
+
+.sub_title {
+    color: rgba(45,48,71,0.6);
+    margin-top: 0.5em;
+}
+
+.staff_p {
+    margin-bottom: 3em;
+}
+
+img {
+    margin-top: 0.3em;
+    width: 100%;
+    height: auto;
+}
+
+footer > p {
+    color: #FCFAF9;
+    font-size: 0.8em;
+    letter-spacing: 0.1em;    
+}
+
+footer a {
+    text-decoration: none;
+    color:#FCFAF9;
+}
+
+footer a:hover {
+    color: #48E5C2; 
+}

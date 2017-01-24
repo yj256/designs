@@ -1,0 +1,170 @@
+/* Media Queries */
+@media screen and (max-width: 480px) {
+    .lightbox {
+        padding-top: 35%;
+    }
+    
+    .main_h nav {
+        width: 100%;
+    }
+    
+    .main_h nav ul {
+        padding-top: 10px;
+        margin-bottom: 22px;
+        float: left;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .main_h nav ul li {
+        width: 100%;
+        padding: 7px 0;
+        margin: 0;
+    }
+    
+    .mobile-toggle {
+        display: block;
+    }
+    
+    .logo {
+        float: none;
+        margin-left: 20px;
+    }
+    
+    .hero .top_nav nav {
+        display: none;
+    }
+    
+    .hero img {
+        bottom: 0;
+    }
+    
+    .hero .banner p {
+        margin-left: 6%;
+        margin-right: 6%;
+    }
+    
+    .sec01 .box {
+        width: 100%;
+    }
+    
+    .sec01 .item1 {
+        margin-bottom: 1em;
+    }
+    
+    .sec01 .item2 {
+        margin-left: 0;
+        margin-top: 0;
+    }
+    
+    .sec04 .tables {
+        display: block;
+    }
+    
+    .sec04 table {
+        width: 100%;
+        margin: 0;
+    }
+    
+    .sec04 table:nth-child(2) {
+        margin-top: 2em;
+    }
+    
+    .sec05 .maps iframe, .sec05 p{
+        width: 100%;
+        float: none;
+        margin-bottom: 0.5em;
+    }
+    
+    .sec05 .maps iframe {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .lightbox {
+        padding-top: 20%;
+    }
+    
+    .main_h nav {
+        width: 100%;
+    }
+    
+    .main_h nav ul {
+        padding-top: 10px;
+        margin-bottom: 22px;
+        float: left;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .main_h nav ul li {
+        width: 100%;
+        padding: 7px 0;
+        margin: 0;
+    }
+    
+    .mobile-toggle {
+        display: block;
+    }
+    
+    .logo {
+        float: none;
+        margin-left: 20px;
+    }
+    
+    .hero .top_nav nav {
+        padding: 0;
+    }
+    
+    .hero .top_nav nav ul {
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 15px;
+        padding: 0;
+    }
+    
+    .hero .top_nav nav ul li {
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+        padding: 0;
+    } 
+    
+    .hero img {
+        bottom: 0;
+    }
+    
+    .hero .banner p {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    
+    .sec01 .item2 {
+        margin-left: 0;
+        margin-top: 0;
+    }
+    
+    .sec04 .tables {
+        display: block;
+    }
+    
+    .sec04 table {
+        width: 100%;
+        margin: 0;
+    }
+    
+    .sec04 table:nth-child(2) {
+        margin-top: 2em;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+    .lightbox {
+        padding-top: 12%;
+    }
+}
+
+@media screen and (min-width: 1201px) {   
+}
